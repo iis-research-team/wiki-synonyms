@@ -13,16 +13,20 @@ class DictWorker:
     HYPERNYMS = 'hypernym'
 
     def __init__(self):
-        self._dict = list()
+        self._data_dict = list()
 
         for fpath in DATA_PATH.iterdir():
             with open(fpath, 'r') as fin:
                 data_dict = json.load(fin)
-                self._dict.append(data_dict)
+                self._data_dict.extend(data_dict)
 
     def get_element_by_synonym(self, synonym: str) -> Optional[dict]:
-        for element in self._dict:
+        for element in self._data_dict:
             if synonym in element[self.SYNONYMS]:
                 return element
 
         return None
+
+    @property
+    def data_dict(self):
+        return self._data_dict
