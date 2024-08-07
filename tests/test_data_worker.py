@@ -1,6 +1,8 @@
+import shutil
 import unittest
 
 from src.data_worker import DataWorker
+from src.paths import INDEX_PATH
 
 
 class TestDataWorker(unittest.TestCase):
@@ -16,3 +18,6 @@ class TestDataWorker(unittest.TestCase):
         hypernym = 'художественный фильм'
         elements = self._data_worker.get_elements_by_hypernym(hypernym)
         self.assertTrue(len(elements) == 2)
+
+    def tearDown(self):
+        shutil.rmtree(INDEX_PATH)
