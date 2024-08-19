@@ -1,1 +1,1 @@
-from src.dict_worker import DictWorker
+from src.data_worker import DataWorker
