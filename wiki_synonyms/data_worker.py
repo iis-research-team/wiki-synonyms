@@ -1,6 +1,6 @@
 from typing import List
 
-from src.data_index.index_builder import IndexBuilder, ElementDict
+from .data_index.index_builder import IndexBuilder, ElementDict
 
 
 class DataWorker:

@@ -1,8 +1,8 @@
 import shutil
 import unittest
 
-from src.data_worker import DataWorker
-from src.paths import INDEX_PATH
+from wiki_synonyms.data_worker import DataWorker
+from wiki_synonyms.paths import INDEX_PATH
 
 
 class TestDataWorker(unittest.TestCase):

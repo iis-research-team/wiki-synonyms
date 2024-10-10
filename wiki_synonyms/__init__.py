@@ -1,1 +1,1 @@
-from src.data_worker import DataWorker
+from .data_worker import DataWorker
