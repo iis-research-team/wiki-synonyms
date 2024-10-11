@@ -23,7 +23,7 @@ class IndexBuilder:
         for fpath in DATA_PATH.iterdir():
             if fpath.suffix != '.json':
                 continue
-            with open(fpath, 'r') as fin:
+            with open(fpath, 'r', encoding='utf-8') as fin:
                 data_dict = json.load(fin)
                 self._data_dict.extend(data_dict)
 
